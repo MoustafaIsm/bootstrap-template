@@ -1,6 +1,11 @@
 // Variables
 const navbar = document.querySelector("#navbar");
 
-document.addEventListener("scroll", (e) => {
-
-});
+// On scroll function
+window.onscroll = function () {
+    if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+        navbar.style.padding = "5px 20px";
+    } else {
+        navbar.style.padding = "25px 20px";
+    }
+}

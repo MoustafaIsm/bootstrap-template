@@ -19,7 +19,7 @@ body {
     position: fixed;
     width: 100vw;
     background-color: rgb(44, 62, 80);
-    padding: 15px 20px;
+    padding: 25px 20px;
 }
 
 .navbar-wrapper > nav {
