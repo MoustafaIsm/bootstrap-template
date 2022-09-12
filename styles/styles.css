@@ -19,6 +19,7 @@ body {
     position: fixed;
     width: 100vw;
     background-color: rgb(44, 62, 80);
+    padding: 15px 20px;
 }
 
 .navbar-wrapper > nav {
@@ -142,7 +143,6 @@ body {
     color: white;
     border: 3px solid white;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px rgb(255, 255, 255,0.5);
 }
 
 .download > button:hover {
@@ -214,7 +214,12 @@ body {
 
 .footer-wrapper span {
     text-decoration: underline;
-    color: rgb(26, 188, 156, 0.8);;
+    color: rgb(26, 188, 156);
+}
+
+.footer-wrapper span:hover {
+    cursor: pointer;
+    color: rgb(23, 155, 129);
 }
 
 .socails-wrapper {
