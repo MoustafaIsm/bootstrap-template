@@ -314,3 +314,26 @@ body {
 .material-symbols-rounded {
     zoom: 200%;
 }
+
+/* Media Query */
+
+@media screen and (max-width: 820px) {
+    .half-width {
+        width: 50%;
+    }
+
+    .column {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .column > div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .full-width {
+        width: 100%;
+    }
+}
