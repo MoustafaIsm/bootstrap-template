@@ -102,13 +102,17 @@
             </span>
             <div class="dark-divider-line"></div>
         </div>
+        <h3 class="error" id="name-error"></h3>
+        <h3 class="error" id="email-error"></h3>
+        <h3 class="error" id="phone-number-error"></h3>
+        <h3 class="error" id="message-error"></h3>
         <form>
             <div class="form-wrapper">
-                <input type="text" placeholder="Full name">
-                <input type="email" placeholder="Email">
-                <input type="number" placeholder="Phone number">
-                <textarea cols="30" rows="10" placeholder="Message"></textarea>
-                <div><button type="button" class="send-btn">Send</button></div>
+                <input type="text" placeholder="Full name" id="full-name">
+                <input type="email" placeholder="Email" id="email">
+                <input type="number" placeholder="Phone number" id="phone-number">
+                <textarea cols="30" rows="10" placeholder="Message" id="message"></textarea>
+                <div><button type="button" class="send-btn" id="send-btn">Send</button></div>
             </div>
         </form>
     </section>

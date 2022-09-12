@@ -187,6 +187,12 @@ body {
     border-bottom: 1px solid rgb(159, 159, 159);
 }
 
+.error {
+    text-align: center;
+    width: auto;
+    color: white;
+}
+
 .send-btn {
     margin: 2% 2%;
     font-size: large;
@@ -195,6 +201,13 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
+}
+
+.send-btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(26, 188, 156, 0.8);
 }
 
 /* Footer */
