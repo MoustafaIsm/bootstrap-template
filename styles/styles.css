@@ -1,0 +1,64 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+}
+
+/*** Sections ***/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Navigation bar */
+.navbar-wrapper {
+    background-color: rgb(44, 62, 80);
+}
+
+.navbar-wrapper > nav {
+    display: flex;
+    margin: 0% 7%;
+}
+
+.navbar-wrapper p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-wrapper p:hover {
+    cursor: pointer;
+}
+
+.navbar-items-list {
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+.navbar-item {
+    font-size: 16px;
+    list-style: none;
+    padding: 2%;
+}
+
+.navbar-item:hover {
+    cursor: pointer;
+    color: rgb(26, 188, 156);
+}
+
+/* Utilities */
+.white-text {
+    color: white;
+    font-size: 24px;
+}
+
+.container {
+    padding: 15px 20px;
+}
