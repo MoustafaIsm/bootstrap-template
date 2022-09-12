@@ -47,6 +47,8 @@ body {
 .navbar-item {
     list-style: none;
     padding: 2%;
+    margin: 1%;
+    border-radius: 20px;
 }
 
 .navbar-item:hover {
@@ -321,6 +323,10 @@ body {
 
 .material-symbols-rounded {
     zoom: 200%;
+}
+
+.green-background {
+    background-color: rgb(26, 188, 156, 0.8);
 }
 
 /* Media Query */

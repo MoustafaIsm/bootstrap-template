@@ -4,15 +4,39 @@ const hero = document.getElementById("hero-section");
 const portfolio = document.getElementById("portfolio-section");
 const about = document.getElementById("about-section");
 const contact = document.getElementById("contact-section");
+const portfolioItem = document.getElementById("portfolio-item");
+const aboutItem = document.getElementById("about-item");
+const contactItem = document.getElementById("contact-item");
 
 // On scroll function
 window.onscroll = function () {
     adjustNavBar();
     let top = window.scrollY;
-    let navbarSize = getSectionSize("navbar");
     let heroSize = getSectionSize("hero-section");
     let potfolioSize = getSectionSize("portfolio-section");
-    let aboutSize = getSectionSize("contact-section");
+    let aboutSize = getSectionSize("about-section");
+    if (top > navbarSize + heroSize + potfolioSize + aboutSize) {
+        aboutItem.classList.remove("green-background");
+        portfolioItem.classList.remove("green-background");
+        contactItem.classList.add("green-background");
+    } else {
+        if (top > navbarSize + heroSize + potfolioSize) {
+            portfolioItem.classList.remove("green-background");
+            contactItem.classList.remove("green-background");
+            aboutItem.classList.add("green-background");
+        } else {
+            if (top > navbarSize + heroSize) {
+                contactItem.classList.remove("green-background");
+                aboutItem.classList.remove("green-background");
+                portfolioItem.classList.add("green-background");
+            } else {
+                contactItem.classList.remove("green-background");
+                aboutItem.classList.remove("green-background");
+                portfolioItem.classList.remove("green-background");
+            }
+        }
+    }
+
 }
 
 
@@ -28,7 +52,5 @@ function adjustNavBar() {
 function getSectionSize(id) {
     let element = document.getElementById(id);
     let elementHeight = element.offsetHeight;
-    elementHeight += parseInt(window.getComputedStyle(element).getPropertyValue("margin-top"));
-    elementHeight += parseInt(window.getComputedStyle(element).getPropertyValue("margin-bottom"));
     return elementHeight;
 }
