@@ -23,22 +23,30 @@ sendBtn.addEventListener("click", validateInputs);
 
 function validateInputs() {
     if (fullName.value != "") {
+        fullName.style.border = "none";
+        fullName.style.borderBottom = "1px solid rgb(159, 159, 159);"
         validateName(fullName.value);
     } else {
         fullName.style.border = "2px solid red";
     }
     if (email.value != "") {
+        email.style.border = "none";
+        email.style.borderBottom = "1px solid rgb(159, 159, 159);"
         validateEmail(email.value);
     } else {
         email.style.border = "2px solid red";
     }
     if (phoneNumber.value != "") {
+        phoneNumber.style.border = "none";
+        phoneNumber.style.borderBottom = "1px solid rgb(159, 159, 159);"
         validatePhoneNumber(phoneNumber.value);
     } else {
         phoneNumber.style.border = "2px solid red";
     }
     if (message.value != "") {
-        validateMessage();
+        message.style.border = "none";
+        message.style.borderBottom = "1px solid rgb(159, 159, 159);"
+        validateMessage(message.value);
     } else {
         message.style.border = "2px solid red";
     }
@@ -74,6 +82,16 @@ function validatePhoneNumber(phoneNumber) {
     } else {
         phoneNumberError.style.backgroundColor = "white";
         phoneNumberError.textContent = "";
+    }
+}
+
+function validateMessage(message) {
+    if (message.length < 100) {
+        messageError.style.backgroundColor = "red";
+        messageError.textContent = "Message should be minimum 100 characters";
+    } else {
+        messageError.style.backgroundColor = "white";
+        messageError.textContent = "";
     }
 }
 
