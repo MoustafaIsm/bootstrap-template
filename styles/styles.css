@@ -151,6 +151,49 @@ body {
     background-color: white;
 }
 
+/* Section */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: centers;
+    padding: 50px 20px !important;
+}
+
+.contact-wrapper h1 {
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 20%;
+}
+
+.form-wrapper > input {
+    margin: 2% 2%;
+    font-size: x-large;
+    padding: 1% 1%;
+    border: none;
+    border-bottom: 1px solid rgb(159, 159, 159);
+}
+
+.form-wrapper > textarea {
+    margin: 2% 2%;
+    font-size: x-large;
+    padding: 1% 1%;
+    border: none;
+    border-bottom: 1px solid rgb(159, 159, 159);
+}
+
+.send-btn {
+    margin: 2% 2%;
+    font-size: large;
+    padding: 2% 3%;
+    background-color: rgb(26, 188, 156, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
 /* Utilities */
 .white-text {
     color: white;
