@@ -177,6 +177,7 @@ body {
     padding: 1% 1%;
     border: none;
     border-bottom: 1px solid rgb(159, 159, 159);
+    outline: none;
 }
 
 .form-wrapper > textarea {
@@ -185,6 +186,8 @@ body {
     padding: 1% 1%;
     border: none;
     border-bottom: 1px solid rgb(159, 159, 159);
+    outline: none;
+    resize: none;
 }
 
 .error {
