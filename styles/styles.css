@@ -19,7 +19,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3% 5%;
 }
 
 .messages-table {
@@ -27,7 +26,7 @@ body {
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    margin: 1% 0%;
+    margin: 2% 3%;
 }
 
 .messages-table > table {
@@ -41,6 +40,13 @@ body {
     width: 25%;
     border: 3px solid rgb(44, 62, 80);
 }
+
+.new-table-data {
+    padding: 1%;
+    width: 25%;
+    border: 3px solid rgb(44, 62, 80);
+}
+
 /* Navigation bar */
 .navbar-wrapper {
     position: fixed;
