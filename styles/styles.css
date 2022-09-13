@@ -196,6 +196,10 @@ body {
     color: white;
 }
 
+button-wrapper {
+    display: flex;
+}
+
 .send-btn {
     margin: 2% 2%;
     font-size: large;

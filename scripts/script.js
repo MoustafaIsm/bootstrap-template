@@ -20,6 +20,9 @@ const messageError = document.getElementById("message-error");
 
 // Contact input validations
 sendBtn.addEventListener("click", validateInputs);
+// Sending message
+let validInputs = true;
+const sendingResult = document.getElementById("sending-result");
 
 function validateInputs() {
     if (fullName.value != "") {
@@ -28,6 +31,7 @@ function validateInputs() {
         validateName(fullName.value);
     } else {
         fullName.style.border = "2px solid red";
+        validInputs = false;
     }
     if (email.value != "") {
         email.style.border = "none";
@@ -35,13 +39,15 @@ function validateInputs() {
         validateEmail(email.value);
     } else {
         email.style.border = "2px solid red";
+        validInputs = false;
     }
     if (phoneNumber.value != "") {
         phoneNumber.style.border = "none";
         phoneNumber.style.borderBottom = "1px solid rgb(159, 159, 159)"
-        validatePhoneNumber(phoneNumber.value);
+        //validatePhoneNumber(phoneNumber.value);
     } else {
         phoneNumber.style.border = "2px solid red";
+        validInputs = false;
     }
     if (message.value != "") {
         message.style.border = "none";
@@ -49,12 +55,31 @@ function validateInputs() {
         validateMessage(message.value);
     } else {
         message.style.border = "2px solid red";
+        validInputs = false;
     }
+    if (validInputs) {
+        sendMessage();
+    }
+}
+// Sending message
+function sendMessage() {
+    let formData = new FormData();
+    formData.append("fullName", fullName.value);
+    formData.append("email", email.value);
+    formData.append("phoneNumber", phoneNumber.value);
+    formData.append("message", message.value);
+    fetch("http://localhost/SEF/backend/add_message.php", {
+        method: 'post',
+        body: formData
+    });
+    sendingResult.textContent = "Sent Successfully";
+    sendingResult.style.color = "green";
 }
 
 // Validation functions
 function validateName(name) {
     if (name.length < 5) {
+        validInputs = false;
         nameError.style.backgroundColor = "red";
         nameError.textContent = "Name should be minimum 5 characters";
     } else {
@@ -66,6 +91,7 @@ function validateName(name) {
 function validateEmail(email) {
     const pattern = "[a-zA-Z0-9+_.-]{3,}@[a-zA-Z.]{5,}";
     if (!email.match(pattern)) {
+        validInputs = false;
         emailError.style.backgroundColor = "red";
         emailError.textContent = "Email should have a minimum of 3 characters before the @ and 5 characters after the @";
     } else {
@@ -77,6 +103,7 @@ function validateEmail(email) {
 function validatePhoneNumber(phoneNumber) {
     const pattern = /[+][9][6][1][3]\d{6}\Z|[+][9][6][1]\d{8}\Z/;
     if (!phoneNumber.match(pattern)) {
+        validInputs = false;
         phoneNumberError.style.backgroundColor = "red";
         phoneNumberError.textContent = "Phone Number should start with +961 and followed by either 6 digits after a 3 (for 03) or. followed by 8 digits";
     } else {
@@ -87,6 +114,7 @@ function validatePhoneNumber(phoneNumber) {
 
 function validateMessage(message) {
     if (message.length < 100) {
+        validInputs = false;
         messageError.style.backgroundColor = "red";
         messageError.textContent = "Message should be minimum 100 characters";
     } else {
