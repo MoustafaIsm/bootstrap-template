@@ -68,7 +68,7 @@ function sendMessage() {
     formData.append("email", email.value);
     formData.append("phoneNumber", phoneNumber.value);
     formData.append("message", message.value);
-    fetch("http://localhost/SEF/backend/add_message.php", {
+    fetch("http://localhost/SEF/bootstrap-template-backend/add_message.php", {
         method: 'post',
         body: formData
     });

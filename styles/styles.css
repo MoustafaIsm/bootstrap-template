@@ -14,6 +14,33 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Messages */
+.messages-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3% 5%;
+}
+
+.messages-table {
+    background-color: rgb(26, 188, 156);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 1% 0%;
+}
+
+.messages-table > table {
+    border: 3px solid rgb(44, 62, 80);
+    width: 90%;
+    margin: 1% 0%;
+}
+
+.messages-table th, .messages-table tr {
+    padding: 1%;
+    width: 25%;
+    border: 3px solid rgb(44, 62, 80);
+}
 /* Navigation bar */
 .navbar-wrapper {
     position: fixed;
